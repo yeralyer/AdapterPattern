@@ -1,4 +1,13 @@
-package PACKAGE_NAME;
+public class KilometerToMileAdapter implements DistanceConverter {
+    private final KilometerConverter converter = new KilometerConverter();
 
-public class KilometerToMileAdapter {
+    @Override
+    public double convert(double kilometers) {
+        return converter.convertToMiles(kilometers);
+    }
+
+    @Override
+    public String getUnitName() {
+        return "miles";
+    }
 }
